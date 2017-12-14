@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/sign.js.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Login Here!</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#"><a href="home.html">Back</a> </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <form name="loginForm" method="post" action="login.php" id="lgform">
+        <table width="20%" align="center">
+
+            <tr>
+                <td>USN:</td>
+                <td><input type="text" size=25 name="usn"></td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td><input type="Password" size=25 name="pwd"></td>
+            </tr>
+
+            <tr>
+                <td><input type="Reset"></td>
+                <td><input type="submit" onclick="check(this.form)" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+    <script language="javascript">
+        function check(form) {
+
+            if (form.usn.value == "ncet" && form.pwd.value == "ncet") {
+                window.open('placement.html');
+            }
+            else {
+                alert("Error Password or Username")
+                
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
